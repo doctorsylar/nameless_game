@@ -15,7 +15,7 @@ public class View extends Application {
         mainStage = primaryStage;
         primaryStage.setTitle("Nameless game");
         root = FXMLLoader.load(getClass().getResource("CharacterCreationScreen.fxml"));
-
+        //checking for updates
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
