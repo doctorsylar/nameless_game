@@ -1,6 +1,5 @@
 package Main.VC;
 
-import Main.Mechanics.Fight;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,7 +11,6 @@ import static Main.VC.View.root;
 
 public class MainController {
     private Model model = Model.getModelInstance();
-    static MainController mainControllerInstance;
 
     @FXML
     Button fireMageChoser, waterMageChoser, earthMageChoser, windMageChoser, attackMinusButton, attackPlusButton;
@@ -24,9 +22,8 @@ public class MainController {
     Label wasted, level, classLabel, attack, defence, buff, health, od;
 
     public MainController() {
-        mainControllerInstance = this;
         for (String key : this.getModel().description.keySet()) {
-            mainControllerInstance.getModel().description.put(key,this.getModel().description.get(key));
+            this.getModel().description.put(key,this.getModel().description.get(key));
         }
     }
 
@@ -138,9 +135,5 @@ public class MainController {
 
     public Model getModel() {
         return model;
-    }
-
-    public void setModel(Model model) {
-        this.model = model;
     }
 }
