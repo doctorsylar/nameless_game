@@ -7,7 +7,7 @@ import javafx.scene.image.ImageView;
 
 public class FightController {
     protected MainController mainController;
-    protected Model model = Model.getModelInstance();
+    private Model model = Model.getModelInstance();
 
     @FXML
     ImageView playerAvatar, enemyAvatar;
