@@ -6,8 +6,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class FightController {
-    protected MainController mainController;
-    private Model model = Model.getModelInstance();
+    private Model model = Model.getModelInstance(); // Instance of model
 
     @FXML
     ImageView playerAvatar, enemyAvatar;
@@ -15,10 +14,10 @@ public class FightController {
     Label characterNameLabel, characterHealthLabel, characterOdLabel, characterDefenceLabel;
 
 
-    void fillAvatars () {
-        playerAvatar.setImage(new Image(model.description.get(("classLabel").concat(".jpg"))));
-        //playerAvatar.setImage(new Image("\\FireMage.jpg"));
-    }
+    //void fillAvatars () {
+    //    playerAvatar.setImage(new Image(model.description.get(("classLabel").concat(".jpg"))));
+    //    //playerAvatar.setImage(new Image("\\FireMage.jpg"));
+    //}
 
     public void fillInformation() {
         //characterNameLabel.setText(model.description.get("classLabel"));

@@ -6,11 +6,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-import static Main.VC.View.mainStage;
-import static Main.VC.View.root;
+import static Main.VC.View.mainStage;    //Stage and root to change scene
+import static Main.VC.View.root;    //Stage and root to change scene
 
 public class MainController {
-    private Model model = Model.getModelInstance();
+    private Model model = Model.getModelInstance(); //Instance of model with static constructor
 
     @FXML
     Button fireMageChoser, waterMageChoser, earthMageChoser, windMageChoser, attackMinusButton, attackPlusButton;
@@ -27,7 +27,7 @@ public class MainController {
         }
     }
 
-
+    //Results of pressing buttons
     @FXML
     public void fireMageChoice() {
         model.description.put("classLabel", "FireMage");
@@ -108,7 +108,6 @@ public class MainController {
         mainStage.show();
         FightController fightController = new FightController();
         fightController.fillInformation();
-        fightController.fillAvatars();
     }
 
 
@@ -117,7 +116,7 @@ public class MainController {
 
 
 
-
+    // Rewriting information on the screen
     private void reWriteResults() {
         wasted.setText(model.description.get("wasted"));
         level.setText(model.description.get("level"));
