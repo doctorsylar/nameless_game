@@ -24,7 +24,7 @@
       </VBox>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="300.0">
          <children>
-            <Button mnemonicParsing="false" text="Кнопка!" />
+            <Button fx:id="startFightButton" mnemonicParsing="false" onAction="#startFight" text="Begin fight!" />
          </children></VBox>
       <VBox prefHeight="400.0" prefWidth="150.0">
          <children>

@@ -106,8 +106,6 @@ public class MainController {
         root = FXMLLoader.load(getClass().getResource("fightScreen.fxml"));
         mainStage.setScene(new Scene(root, 600, 400));
         mainStage.show();
-        FightController fightController = new FightController();
-        fightController.fillInformation();
     }
 
 
