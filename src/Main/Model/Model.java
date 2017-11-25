@@ -1,13 +1,11 @@
-package Main.VC;
-
-import Main.Mechanics.*;
+package Main.Model;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Model {
     static Model model = new Model(); //Static instance
-    Map<String, String> description = new HashMap();
+    public Map<String, String> description = new HashMap();
 
     private Model() {
         this.description.put("classLabel", "None");
@@ -21,7 +19,7 @@ public class Model {
     }
 
     //Maximum upgrade points = 3, level doesn't change with health and OD modifiers
-    void plusStat (String stat) {
+    public void plusStat (String stat) {
         if (!stat.equals("health") & !stat.equals("od") & !this.description.get(stat).equals("3")) {
             this.description.put("level", String.valueOf(Integer.parseInt(this.description.get("level"))+1));
         }
@@ -44,7 +42,7 @@ public class Model {
     }
 
     //Minimum upgrade points = 0, level doesn't change with health and OD modifiers
-    void minusStat (String stat) {
+    public void minusStat (String stat) {
         if (!stat.equals("health") & !stat.equals("od") & !this.description.get(stat).equals("0")) {
             this.description.put("level", String.valueOf(Integer.parseInt(this.description.get("level"))-1));
         }

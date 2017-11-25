@@ -1,6 +1,6 @@
-package Main.VC;
+package Main.Control;
 
-import Main.Mechanics.Fight;
+import Main.Model.Model;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
