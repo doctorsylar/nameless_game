@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.VC.FightController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Control.FightController">
    <children>
       <VBox prefHeight="400.0" prefWidth="150.0">
          <children>
@@ -24,7 +24,7 @@
       </VBox>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="300.0">
          <children>
-            <Button mnemonicParsing="false" text="Кнопка!" />
+            <Button fx:id="startFightButton" mnemonicParsing="false" onAction="#startFight" text="Begin fight!" />
          </children></VBox>
       <VBox prefHeight="400.0" prefWidth="150.0">
          <children>

@@ -1,13 +1,14 @@
-package Main.VC;
+package Main.Control;
 
+import Main.Model.Model;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-import static Main.VC.View.mainStage;    //Stage and root to change scene
-import static Main.VC.View.root;    //Stage and root to change scene
+import static Main.MainClass.mainStage;    //Stage and root to change scene
+import static Main.MainClass.root;    //Stage and root to change scene
 
 public class MainController {
     private Model model = Model.getModelInstance(); //Instance of model with static constructor
@@ -103,11 +104,9 @@ public class MainController {
     // ДОПИСАТЬ ЗАВЕРШЕНИЕ НАСТРОЕК
     @FXML
     public void finishSetup() throws Exception {
-        root = FXMLLoader.load(getClass().getResource("fightScreen.fxml"));
+        root = FXMLLoader.load(getClass().getResource("../View/fightScreen.fxml"));
         mainStage.setScene(new Scene(root, 600, 400));
         mainStage.show();
-        FightController fightController = new FightController();
-        fightController.fillInformation();
     }
 
 

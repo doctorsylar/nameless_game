@@ -1,4 +1,4 @@
-package Main.Mechanics;
+package Main.Model.Mechanics;
 
 /**
  * Created by Andrey on 14.07.2017.
