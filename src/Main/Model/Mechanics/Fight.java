@@ -1,4 +1,4 @@
-package Main.Mechanics;
+package Main.Model.Mechanics;
 
 import java.util.Scanner;
 
